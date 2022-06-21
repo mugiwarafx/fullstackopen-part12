@@ -1,0 +1,411 @@
+Script started on Tue Jun 21 15:26:25 2022
+[?2004hðŸ¦„ > ll[K[Kdocker -i start serene_wilbu[Kur
+[?2004lunknown shorthand flag: 'i' in -i
+See 'docker --help'.
+
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/superjordi/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default
+                           context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/superjordi/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/superjordi/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/superjordi/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx (Docker Inc., v0.8.2)
+  compose*    Docker Compose (Docker Inc., v2.6.0)
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image (Anchore Inc., 0.6.0)
+  scan*       Docker Scan (Docker Inc., v0.17.0)
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+
+[1mTo get more help with docker, check out our guides at https://docs.docker.com/go/guides/[0m
+
+[?2004hðŸ¦„ > doc[K[K[Kdocker -i start serene_wilbur[1P[1P[1P[1P[1@ [C[C[C[C[C[C serene_wilbur= serene_wilbur[1P serene_wilbur- serene_wilburi serene_wilbur[C serene_wilbur[C[C[1Pserene_wilbur
+[?2004l[?2004h]0;root@c71e765bca15: /root@c71e765bca15:/# [K]0;root@c71e765bca15: /root@c71e765bca15:/# cd usr/src/app/
+[?2004l[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# ll
+[?2004ltotal 8
+drwxr-xr-x 2 root root 4096 Jun 21 13:26 [0m[01;34m.[0m/
+drwxr-xr-x 1 root root 4096 Jun 21 13:17 [01;34m..[0m/
+-rw-r--r-- 1 root root    0 Jun 21 13:17 index.js
+[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# cd
+[?2004l[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# [7mcurl -sL https://deb.nodesource.com/setup_16.x | bash[27m]0;root@c71e765bca15: ~root@c71e765bca15:~# curl -sL https://deb.nodesource.com/setup_16.x | bash
+[?2004lbash: curl: command not found
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# [Ksudp ap       apt i  -install curl
+[?2004lbash: apt-install: command not found
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# apt-install curlcurl -sL https://deb.nodesource.com/setup_16.x | bash]0;root@c71e765bca15: ~root@c71e765bca15:~# cd[Kllcd usr/src/app/exit[Kvim /usr/src/app/index.js ll[Kapt-get -y install nano vimupdate[Kexit[Kapt-get updateexit[Kapt-get update-y install nano vimll[Kapt-get -y install nano vim          cui rl
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 9%Reading package lists... 9%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 7%Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 openssl publicsuffix
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  ca-certificates curl libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+  libsasl2-modules-db libssh-4 openssl publicsuffix
+0 upgraded, 15 newly installed, 0 to remove and 6 not upgraded.
+Need to get 2972 kB of archives.
+After this operation, 7059 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.4 [1186 kB]
+0% [1 openssl 14.2 kB/1186 kB 1%]                                 33% [Working]             Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 ca-certificates all 20211016 [148 kB]
+33% [2 ca-certificates 2613 B/148 kB 2%]                                        39% [Waiting for headers]                         Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3 kB]
+                         Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+44% [4 libpsl5 58.4 kB/58.4 kB 100%]                                    Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 publicsuffix all 20211207.1025-1 [129 kB]
+48% [5 publicsuffix 98.9 kB/129 kB 76%]                                       50% [Working]             Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+51% [6 libbrotli1 32.8 kB/315 kB 10%]                                     59% [Waiting for headers]                         Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1 [20.8 kB]
+                         Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1 [53.9 kB]
+62% [8 libsasl2-2 25.0 kB/53.9 kB 46%]                                      Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.11+dfsg-1~exp1ubuntu3.1 [184 kB]
+65% [9 libldap-2.5-0 18.6 kB/184 kB 10%]                                        70% [Working]             Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+71% [10 librtmp1 31.5 kB/58.2 kB 54%]                                     73% [Working]             Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libssh-4 amd64 0.9.6-2build1 [184 kB]
+74% [11 libssh-4 37.1 kB/184 kB 20%]                                    80% [Waiting for headers]                         Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.2 [290 kB]
+80% [12 libcurl4 7659 B/290 kB 3%]                                  89% [Working]             Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.2 [194 kB]
+90% [13 curl 46.7 kB/194 kB 24%]                                95% [Working]             Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.11+dfsg-1~exp1ubuntu3.1 [16.8 kB]
+96% [14 libldap-common 16.8 kB/16.8 kB 100%]                                            Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsasl2-modules amd64 2.1.27+dfsg2-3ubuntu1 [57.5 kB]
+98% [15 libsasl2-modules 49.2 kB/57.5 kB 86%]                                             100% [Working]              Fetched 2972 kB in 1s (4908 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package openssl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7184 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.0.2-0ubuntu1.4_amd64.deb ...
+Unpacking openssl (3.0.2-0ubuntu1.4) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20211016_all.deb ...
+Unpacking ca-certificates (20211016) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../02-libnghttp2-14_1.43.0-1build3_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1build3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../03-libpsl5_0.21.0-1.2build2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../04-publicsuffix_20211207.1025-1_all.deb ...
+Unpacking publicsuffix (20211207.1025-1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../05-libbrotli1_1.0.9-2build6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../06-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../07-libsasl2-2_2.1.27+dfsg2-3ubuntu1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../08-libldap-2.5-0_2.5.11+dfsg-1~exp1ubuntu3.1_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.11+dfsg-1~exp1ubuntu3.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../09-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../10-libssh-4_0.9.6-2build1_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.6-2build1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../11-libcurl4_7.81.0-1ubuntu1.2_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.2) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../12-curl_7.81.0-1ubuntu1.2_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.2) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../13-libldap-common_2.5.11+dfsg-1~exp1ubuntu3.1_all.deb ...
+Unpacking libldap-common (2.5.11+dfsg-1~exp1ubuntu3.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../14-libsasl2-modules_2.1.27+dfsg2-3ubuntu1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1build3) ...
+Setting up libldap-common (2.5.11+dfsg-1~exp1ubuntu3.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1) ...
+Setting up libssh-4:amd64 (0.9.6-2build1) ...
+Setting up openssl (3.0.2-0ubuntu1.4) ...
+Setting up publicsuffix (20211207.1025-1) ...
+Setting up libldap-2.5-0:amd64 (2.5.11+dfsg-1~exp1ubuntu3.1) ...
+Setting up ca-certificates (20211016) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+127 added, 0 removed; done.
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.2) ...
+Setting up curl (7.81.0-1ubuntu1.2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3) ...
+Processing triggers for ca-certificates (20211016) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# apt-get -y install curl[7Pinstall curlcurl -sL https://deb.nodesource.com/setup_16.x | bash
+[?2004l
+## Installing the NodeSource Node.js 16.x repo...
+
+
+## Populating apt-get cache...
+
++ apt-get update
+0% [Working]            Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+0% [Connecting to archive.ubuntu.com (91.189.91.38)]                                                    0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+0% [Waiting for headers]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 9%Reading package lists... 9%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+
+## Installing packages required for setup: lsb-release gnupg...
+
++ apt-get install -y lsb-release gnupg > /dev/null 2>&1
+
+## Confirming "jammy" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_16.x/dists/jammy/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg >/dev/null
+
+## Creating apt sources list file for the NodeSource Node.js 16.x repo...
+
++ echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x jammy main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x jammy main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+            Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+0% [Waiting for headers] [Waiting for headers]                                              Get:3 https://deb.nodesource.com/node_16.x jammy InRelease [4583 B]
+                                              0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+                        0% [Working]            Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+0% [Working]0% [Working]0% [Working]0% [Working]0% [Waiting for headers]88% [Waiting for headers]88% [Waiting for headers]                         Get:6 https://deb.nodesource.com/node_16.x jammy/main amd64 Packages [773 B]
+100% [6 Packages 773 B/773 B 100%]                                  100% [Working]100% [6 Packages store 0 B]                           100% [Working]              Fetched 5356 B in 1s (5314 B/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 9%Reading package lists... 9%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+
+## Run `[1msudo apt-get install -y nodejs(B[m` to install Node.js 16.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+     echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# [K[7mapt install -y nodejs[27mapt install -y nodejs
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 9%Reading package lists... 9%Reading package lists... 91%Reading package lists... 91%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 96%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 2%Reading state information... Done
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 6 not upgraded.
+Need to get 26.4 MB of archives.
+After this operation, 124 MB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 https://deb.nodesource.com/node_16.x jammy/main amd64 nodejs amd64 16.15.1-deb-1nodesource1 [26.4 MB]
+[33m0% [1 nodejs 16.2 kB/26.4 MB 0%][0m[33m15% [1 nodejs 5041 kB/26.4 MB 19%][0m[33m32% [1 nodejs 10.6 MB/26.4 MB 40%][0m[33m50% [1 nodejs 16.4 MB/26.4 MB 62%][0m[33m66% [1 nodejs 21.7 MB/26.4 MB 82%][0m[33m                                  100% [Working][0m              Fetched 26.4 MB in 3s (10.5 MB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+
+7[0;36r8[1ASelecting previously unselected package nodejs.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 8064 files and directories currently installed.)
+Preparing to unpack .../nodejs_16.15.1-deb-1nodesource1_amd64.deb ...
+7[37;0f[42m[30mProgress: [  0%][49m[39m [.................................................................................................................] 87[37;0f[42m[30mProgress: [ 20%][49m[39m [######################...........................................................................................] 8Unpacking nodejs (16.15.1-deb-1nodesource1) ...
+7[37;0f[42m[30mProgress: [ 40%][49m[39m [#############################################....................................................................] 8Setting up nodejs (16.15.1-deb-1nodesource1) ...
+7[37;0f[42m[30mProgress: [ 60%][49m[39m [###################################################################..............................................] 87[37;0f[42m[30mProgress: [ 80%][49m[39m [##########################################################################################.......................] 8
+7[0;37r8[1A[J[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# 
+[?2004l[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# 
+[?2004l[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# cd us     ;;  ll
+[?2004ltotal 24
+drwx------ 1 root root 4096 Jun 21 13:26 [0m[01;34m.[0m/
+drwxr-xr-x 1 root root 4096 Jun 21 13:17 [01;34m..[0m/
+-rw------- 1 root root  148 Jun 21 13:26 .bash_history
+-rw-r--r-- 1 root root 3106 Oct 15  2021 .bashrc
+-rw-r--r-- 1 root root  161 Jul  9  2019 .profile
+-rw------- 1 root root  806 Jun 21 13:26 .viminfo
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# cd  cd  pwd
+[?2004l/root
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# cd ..
+[?2004l[?2004h]0;root@c71e765bca15: /root@c71e765bca15:/# cd usr/sar  rc/app/
+[?2004l[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# cd
+[?2004l[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# hostrp    i  istory
+[?2004l    1  pwd
+    2  mkdir -p usr/src/app
+    3  ll
+    4  cd usr/src/app/
+    5  ll
+    6  touch index.js
+    7  ll
+    8  exit
+    9  apt-get update
+   10  apt-get -y install nano vim
+   11  ll
+   12  vim /usr/src/app/index.js 
+   13  exit
+   14  cd usr/src/app/
+   15  ll
+   16  cd
+   17  curl -sL https://deb.nodesource.com/setup_16.x | bash
+   18  apt-install curl
+   19  apt-get -y install curl
+   20  curl -sL https://deb.nodesource.com/setup_16.x | bash
+   21  apt install -y nodejs
+   22  ll
+   23  pwd
+   24  cd ..
+   25  cd usr/src/app/
+   26  cd
+   27  history
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# node --version
+[?2004lv16.15.1
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# cd  vio m index.js            pwd
+[?2004l/root
+[?2004h]0;root@c71e765bca15: ~root@c71e765bca15:~# cd /usr/src/app/
+[?2004l[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# npm in n nit
+[?2004lThis utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+[1G[0Jpackage name: (app) [21G
+[1G[0Jversion: (1.0.0) [18G
+[1G[0Jdescription: [14G
+[1G[0Jentry point: (index.js) [25G
+[1G[0Jtest command: [15G
+[1G[0Jgit repository: [17G
+[1G[0Jkeywords: [11G
+[1G[0Jauthor: [9G
+[1G[0Jlicense: (ISC) [16G
+About to write to /usr/src/app/package.json:
+
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+[1G[0JIs this OK? (yes) [19Gy
+[37;40mnpm[0m [0m[36;40mnotice[0m[35m[0m 
+[0m[37;40mnpm[0m [0m[36;40mnotice[0m[35m[0m New [33mminor[39m version of npm available! [31m8.11.0[39m -> [32m8.12.2[39m
+[0m[37;40mnpm[0m [0m[36;40mnotice[0m[35m[0m Changelog: [36mhttps://github.com/npm/cli/releases/tag/v8.12.2[39m
+[0m[37;40mnpm[0m [0m[36;40mnotice[0m[35m[0m Run [32mnpm install -g npm@8.12.2[39m to update!
+[0m[37;40mnpm[0m [0m[36;40mnotice[0m[35m[0m 
+[0m[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# ll
+[?2004ltotal 12
+drwxr-xr-x 2 root root 4096 Jun 21 13:31 [0m[01;34m.[0m/
+drwxr-xr-x 1 root root 4096 Jun 21 13:17 [01;34m..[0m/
+-rw-r--r-- 1 root root    0 Jun 21 13:17 index.js
+-rw-r--r-- 1 root root  199 Jun 21 13:31 package.json
+[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# cat i     vim index.js 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;37r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[37;1H"index.js" 0L, 0B[2;1H½[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                      [3;1H~                                                                                                                                      [4;1H~                                                                                                                                      [5;1H~                                                                                                                                      [6;1H~                                                                                                                                      [7;1H~                                                                                                                                      [8;1H~                                                                                                                                      [9;1H~                                                                                                                                      [10;1H~                                                                                                                                      [11;1H~                                                                                                                                      [12;1H~                                                                                                                                      [13;1H~                                                                                                                                      [14;1H~                                                                                                                                      [15;1H~                                                                                                                                      [16;1H~                                                                                                                                      [17;1H~                                                                                                                                      [18;1H~                                                                                                                                      [19;1H~                                                                                                                                      [20;1H~                                                                                                                                      [21;1H~                                                                                                                                      [22;1H~                                                                                                                                      [23;1H~                                                                                                                                      [24;1H~                                                                                                                                      [25;1H~                                                                                                                                      [26;1H~                                                                                                                                      [27;1H~                                                                                                                                      [28;1H~                                                                                                                                      [29;1H~                                                                                                                                      [30;1H~                                                                                                                                      [31;1H~                                                                                                                                      [32;1H~                                                                                                                                      [33;1H~                                                                                                                                      [34;1H~                                                                                                                                      [35;1H~                                                                                                                                      [36;1H~                                                                                                                                      [m[37;118H0,0-1[9CAll[1;1H[?25h[?12$p[27m[23m[29m[m[H[2J[?25l[2;1H[1m[34m~                                                                                                                                      [3;1H~                                                                                                                                      [4;1H~                                                                                                                                      [5;1H~                                                                                                                                      [6;1H~                                                                                                                                      [7;1H~                                                                                                                                      [8;1H~                                                                                                                                      [9;1H~                                                                                                                                      [10;1H~                                                                                                                                      [11;1H~                                                                                                                                      [12;1H~                                                                                                                                      [13;1H~                                                                                                                                      [14;1H~                                                                                                                                      [15;1H~                                                                                                                                      [16;1H~                                                                                                                                      [17;1H~                                                                                                                                      [18;1H~                                                                                                                                      [19;1H~                                                                                                                                      [20;1H~                                                                                                                                      [21;1H~                                                                                                                                      [22;1H~                                                                                                                                      [23;1H~                                                                                                                                      [24;1H~                                                                                                                                      [25;1H~                                                                                                                                      [26;1H~                                                                                                                                      [27;1H~                                                                                                                                      [28;1H~                                                                                                                                      [29;1H~                                                                                                                                      [30;1H~                                                                                                                                      [31;1H~                                                                                                                                      [32;1H~                                                                                                                                      [33;1H~                                                                                                                                      [34;1H~                                                                                                                                      [35;1H~                                                                                                                                      [36;1H~                                                                                                                                      [m[37;118H0,0-1[9CAll"index.js" 0L, 0B[1;1H[?25h[?25l[37;108HH[1;1H[37;108H [1;1H[?25h[?25l[37;108HI[1;1H[37;108H [1;1H[37;1H[1m-- INSERT --[m[37;13H[K[37;118H0,1[11CAll[1;1H[?25h[?25lc[37;118H1,2[1;2H[?25h[?25lo[37;120H3[1;3H[?25h[?25ln[37;120H4[1;4H[?25h[?25ls[37;120H5[1;5H[?25h[?25lo[37;120H6[1;6H[?25h[?25ll[37;120H7[1;7H[?25h[?25le[37;120H8[1;8H[?25h[?25l.[37;120H9[1;9H[?25h[?25ll[37;120H10[1;10H[?25h[?25lo[37;121H1[1;11H[?25h[?25lg[37;121H2[1;12H[?25h[?25l([37;121H3[1;13H[?25h[?25l-[37;121H4[1;14H[?25h[?25l[1;13H[K[37;121H3[1;13H[?25h[?25l0[37;121H4[1;14H[?25h[?25l[1;13H[K[37;121H3[1;13H[?25h[?25l=[37;121H4[1;14H[?25h[?25l[1m[35m'[m[37;121H5[1;15H[?25h[?25l[1m[35mH[m[37;121H6[1;16H[?25h[?25l[1;15H[K[37;121H5[1;15H[?25h[?25l[1;14H[K[37;121H4[1;14H[?25h[?25l[1;13H[K[37;121H3[1;13H[?25h[?25l[1m[35m'[m[37;121H4[1;14H[?25h[?25l[1m[35mh[m[37;121H5[1;15H[?25h[?25l[1m[35mE[m[37;121H6[1;16H[?25h[?25l[1;15H[K[37;121H5[1;15H[?25h[?25l[1;14H[K[37;121H4[1;14H[?25h[?25l[1m[35mH[m[37;121H5[1;15H[?25h[?25l[1m[35me[m[37;121H6[1;16H[?25h[?25l[1m[35ml[m[37;121H7[1;17H[?25h[?25l[1m[35ml[m[37;121H8[1;18H[?25h[?25l[1m[35mo[m[37;121H9[1;19H[?25h[?25l[1m[35mw[m[37;120H20[1;20H[?25h[?25l[1;19H[K[37;120H19[1;19H[?25h[?25l[1m[35m [m[37;120H20[1;20H[?25h[?25l[1m[35mw[m[37;121H1[1;21H[?25h[?25l[1m[35mo[m[37;121H2[1;22H[?25h[?25l[1m[35mr[m[37;121H3[1;23H[?25h[?25l[1m[35ml[m[37;121H4[1;24H[?25h[?25l[1m[35md[m[37;121H5[1;25H[?25h[?25l[1m[35m'[m[37;121H6[1;26H[?25h[?25l)[1;12H[46m([13C)[m[37;121H7[1;27H[?25h[?25l[1m[35m'[m[1;12H([13C)[37;121H8[1;28H[?25h[?25l[1;27H[K[1;12H[46m([13C)[m[37;121H7[1;27H[?25h[?25ll[1;12H([13C)[37;121H8[1;28H[?25h[?25l;[37;121H9[1;29H[?25h[?25l[1;28H[K[37;121H8[1;28H[?25h[?25l[1;27H[K[1;12H[46m([13C)[m[37;121H7[1;27H[?25h[?25l;[1;12H([13C)[37;121H8[1;28H[?25h[37;1H[K[1;27H[?25l[37;108H^[[1;27H[37;108H  [1;28H[37;118H1,27[10CAll[1;27H[?25h[?25l[37;108H:[1;27H[37;108H[K[37;1H:[?25hwq[?25l[?2004l[>4;m"index.js" 1L, 28B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# vim pacindex.js          package.json 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;37r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[37;1H"package.json" 11L, 199B[2;1H½[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[35m[46m{[m
+  "[33mname[m": "[31mapp[m",[2;17H[K[3;1H  "[33mversion[m": "[31m1.0.0[m",[3;22H[K[4;3H"[33mdescription[m": "",
+  "[33mmain[m": "[31mindex.js[m",
+  "[33mscripts[m": [35m{[m
+    "[33mtest[m": "[31mecho [m[35m\"[m[31mError: no test specified[m[35m\"[m[31m && exit 1[m"
+  [35m}[m,
+  "[33mauthor[m": "",
+  "[33mlicense[m": "[31mISC[m"
+[35m[46m}[m
+[1m[34m~                                                                                                                                      [13;1H~                                                                                                                                      [14;1H~                                                                                                                                      [15;1H~                                                                                                                                      [16;1H~                                                                                                                                      [17;1H~                                                                                                                                      [18;1H~                                                                                                                                      [19;1H~                                                                                                                                      [20;1H~                                                                                                                                      [21;1H~                                                                                                                                      [22;1H~                                                                                                                                      [23;1H~                                                                                                                                      [24;1H~                                                                                                                                      [25;1H~                                                                                                                                      [26;1H~                                                                                                                                      [27;1H~                                                                                                                                      [28;1H~                                                                                                                                      [29;1H~                                                                                                                                      [30;1H~                                                                                                                                      [31;1H~                                                                                                                                      [32;1H~                                                                                                                                      [33;1H~                                                                                                                                      [34;1H~                                                                                                                                      [35;1H~                                                                                                                                      [36;1H~                                                                                                                                      [m[37;118H1,1[11CAll[1;1H[?25h[?12$p[27m[23m[29m[m[H[2J[?25l[1;1H[1m[31m[46m{[m
+  "[1m[33mname[m": "[1m[35mapp[m",
+  "[1m[33mversion[m": "[1m[35m1.0.0[m",
+  "[1m[33mdescription[m": "",
+  "[1m[33mmain[m": "[1m[35mindex.js[m",
+  "[1m[33mscripts[m": [1m[31m{[m
+    "[1m[33mtest[m": "[1m[35mecho [m[1m[31m\"[m[1m[35mError: no test specified[m[1m[31m\"[m[1m[35m && exit 1[m"
+  [1m[31m}[m,
+  "[1m[33mauthor[m": "",
+  "[1m[33mlicense[m": "[1m[35mISC[m"
+[1m[31m[46m}[m
+[1m[34m~                                                                                                                                      [13;1H~                                                                                                                                      [14;1H~                                                                                                                                      [15;1H~                                                                                                                                      [16;1H~                                                                                                                                      [17;1H~                                                                                                                                      [18;1H~                                                                                                                                      [19;1H~                                                                                                                                      [20;1H~                                                                                                                                      [21;1H~                                                                                                                                      [22;1H~                                                                                                                                      [23;1H~                                                                                                                                      [24;1H~                                                                                                                                      [25;1H~                                                                                                                                      [26;1H~                                                                                                                                      [27;1H~                                                                                                                                      [28;1H~                                                                                                                                      [29;1H~                                                                                                                                      [30;1H~                                                                                                                                      [31;1H~                                                                                                                                      [32;1H~                                                                                                                                      [33;1H~                                                                                                                                      [34;1H~                                                                                                                                      [35;1H~                                                                                                                                      [36;1H~                                                                                                                                      [m[37;118H1,1[11CAll"package.json" 11L, 199B[1;1H[?25h[?25l[37;108H~@k[1;1H[37;108H   [2;1H[1;1H[1m[31m{[11;1H}[m[37;118H2[2;1H[?25h[?25l[37;108H~@k[2;1H[37;108H   [3;1H[37;118H3[3;1H[?25h[?25l[37;108H~@k[3;1H[37;108H   [4;1H[37;118H4[4;1H[?25h[?25l[37;108H~@k[4;1H[37;108H   [5;1H[37;118H5[5;1H[?25h[?25l[37;108H~@k[5;1H[37;108H   [6;1H[37;118H6[6;1H[?25h[?25l[37;108H~@k[6;1H[37;108H   [7;1H[37;118H7[7;1H[?25h[?25l[37;108H~@@[7;1H[37;108H   [7;57H[37;120H57[7;57H[?25h[?25l[37;108H~@k[7;57H[37;108H   [7;57H[?25h[?25l[37;108Hi[7;57H[37;108H [7;57H[37;1H[1m-- INSERT --[m[37;13H[K[37;118H7,57[10CAll[7;57H[?25h[?25l[1m[35m0[m"[37;121H8[7;58H[?25h[?25l"[7;58H[K[37;121H7[7;57H[?25h[?25l[37;121H8[7;58H[?25h[?25l[1m[37m[41m,
+  }[m,[37;121H9[7;59H[?25h[?25l[8;36r[8;1H[L[1;37r[8;1H[1m[37m[41m    [m[12;1H}[37;118H[K[37;118H8,5[11CAll[8;5H[?25h[?25l[37;120H4[8;4H[?25h[?25l[37;120H5[8;5H[?25h[?25l    "
+  },[37;120H6[8;6H[?25h[?25l"[37;120H7[8;7H[?25h[?25l[37;120H6[8;6H[?25h[?25l[1m[35mn[m"[37;120H7[8;7H[?25h[?25l"[8;7H[K[37;120H6[8;6H[?25h[?25l[8;6H[K[37;120H5[8;5H[?25h[?25l"[8;5H[K[37;120H1[8;1H[?25h[?25l[37;120H2[8;2H[?25h[?25l[8;1H[K[37;120H1[8;1H[?25h[?25l[7;36r[36;1H
+[1;37r[7;5H"[1m[33mtest[m": "[1m[35mecho [m[1m[31m\"[m[1m[35mError: no test specified[m[1m[31m\"[m[1m[35m && exit 1[m"[1m[37m[41m,
+  }[m[36;1H[1m[34m~                                                                                                                                      [m[37;118H[K[37;118H7,59[10CAll[7;59H[?25h[37;1H[K[7;58H[?25l[37;108H^[[7;58H[37;108H  [7;59H[37;118H7,58[10CAll[7;58H[?25h[?25l[37;108H:[7;58H[37;108H[K[37;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[37;1H[K[37;1H[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# node i /usr/src/app/index.js 
+[?2004lHello world
+[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# c exit
+[?2004lexit
+[?2004hðŸ¦„ > exit
+[?2004lexit
+
+Script done on Tue Jun 21 15:32:53 2022
