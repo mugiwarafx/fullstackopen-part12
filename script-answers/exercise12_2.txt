@@ -1,0 +1,54 @@
+Script started on Tue Jun 21 15:16:19 2022
+[?2004h🦄 > [7mdocker run -it ubuntu bash[27m[C[C[C[C[Cdocker run -it ubuntu bash
+[?2004lUnable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K405f018f9d1d: Pulling fs layer [1B[1A[2K405f018f9d1d: Downloading  306.4kB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  1.239MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  2.501MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  3.746MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  4.987MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  6.237MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  7.482MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  8.735MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  9.665MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  9.976MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  11.22MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  11.84MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  12.78MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  14.02MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  15.28MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  16.53MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  17.77MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  19.03MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  20.28MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  21.53MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  22.79MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  24.03MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  25.28MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  26.54MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  27.79MB/30.42MB[1B[1A[2K405f018f9d1d: Downloading  29.34MB/30.42MB[1B[1A[2K405f018f9d1d: Verifying Checksum [1B[1A[2K405f018f9d1d: Download complete [1B[1A[2K405f018f9d1d: Extracting  327.7kB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  3.277MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  6.226MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting   8.52MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  10.81MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  13.43MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  16.71MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  20.32MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  23.59MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  26.21MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  27.53MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  29.49MB/30.42MB[1B[1A[2K405f018f9d1d: Extracting  30.42MB/30.42MB[1B[1A[2K405f018f9d1d: Pull complete [1BDigest: sha256:b6b83d3c331794420340093eb706a6f152d9c1fa51b262d9bf34594887c2c7ac
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@c71e765bca15: /root@c71e765bca15:/# [K]0;root@c71e765bca15: /root@c71e765bca15:/# pwd  p wd
+[?2004l/
+[?2004h]0;root@c71e765bca15: /root@c71e765bca15:/# mkdir -p usr/src/app
+[?2004l[?2004h]0;root@c71e765bca15: /root@c71e765bca15:/# ll
+[?2004ltotal 60
+drwxr-xr-x   1 root root 4096 Jun 21 13:17 [0m[01;34m.[0m/
+drwxr-xr-x   1 root root 4096 Jun 21 13:17 [01;34m..[0m/
+-rwxr-xr-x   1 root root    0 Jun 21 13:17 [01;32m.dockerenv[0m*
+lrwxrwxrwx   1 root root    7 May 31 15:42 [01;36mbin[0m -> [01;34musr/bin[0m/
+drwxr-xr-x   2 root root 4096 Apr 18 10:28 [01;34mboot[0m/
+drwxr-xr-x   5 root root  340 Jun 21 13:17 [01;34mdev[0m/
+drwxr-xr-x   1 root root 4096 Jun 21 13:17 [01;34metc[0m/
+drwxr-xr-x   2 root root 4096 Apr 18 10:28 [01;34mhome[0m/
+lrwxrwxrwx   1 root root    7 May 31 15:42 [01;36mlib[0m -> [01;34musr/lib[0m/
+lrwxrwxrwx   1 root root    9 May 31 15:42 [01;36mlib32[0m -> [01;34musr/lib32[0m/
+lrwxrwxrwx   1 root root    9 May 31 15:42 [01;36mlib64[0m -> [01;34musr/lib64[0m/
+lrwxrwxrwx   1 root root   10 May 31 15:42 [01;36mlibx32[0m -> [01;34musr/libx32[0m/
+drwxr-xr-x   2 root root 4096 May 31 15:42 [01;34mmedia[0m/
+drwxr-xr-x   2 root root 4096 May 31 15:42 [01;34mmnt[0m/
+drwxr-xr-x   2 root root 4096 May 31 15:42 [01;34mopt[0m/
+dr-xr-xr-x 141 root root    0 Jun 21 13:17 [01;34mproc[0m/
+drwx------   2 root root 4096 May 31 15:45 [01;34mroot[0m/
+drwxr-xr-x   5 root root 4096 May 31 15:45 [01;34mrun[0m/
+lrwxrwxrwx   1 root root    8 May 31 15:42 [01;36msbin[0m -> [01;34musr/sbin[0m/
+drwxr-xr-x   2 root root 4096 May 31 15:42 [01;34msrv[0m/
+dr-xr-xr-x  13 root root    0 Jun 21 13:17 [01;34msys[0m/
+drwxrwxrwt   2 root root 4096 May 31 15:45 [30;42mtmp[0m/
+drwxr-xr-x   1 root root 4096 May 31 15:42 [01;34musr[0m/
+drwxr-xr-x  11 root root 4096 May 31 15:45 [01;34mvar[0m/
+[?2004h]0;root@c71e765bca15: /root@c71e765bca15:/# cd usr/src/c app/
+[?2004l[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# ll
+[?2004ltotal 8
+drwxr-xr-x 2 root root 4096 Jun 21 13:17 [0m[01;34m.[0m/
+drwxr-xr-x 1 root root 4096 Jun 21 13:17 [01;34m..[0m/
+[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# to ouch index.js
+[?2004l[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# exit    ll
+[?2004ltotal 8
+drwxr-xr-x 2 root root 4096 Jun 21 13:17 [0m[01;34m.[0m/
+drwxr-xr-x 1 root root 4096 Jun 21 13:17 [01;34m..[0m/
+-rw-r--r-- 1 root root    0 Jun 21 13:17 index.js
+[?2004h]0;root@c71e765bca15: /usr/src/approot@c71e765bca15:/usr/src/app# exit
+[?2004lexit
+[?2004h🦄 > e[K
+[?2004l[?2004h🦄 > exit
+[?2004lexit
+
+Script done on Tue Jun 21 15:18:31 2022
