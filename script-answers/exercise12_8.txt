@@ -1,0 +1,148 @@
+Script started on Mon Jun 27 00:06:24 2022
+[?2004h🦄 > git log --oneline
+[?2004l[?1h=[33mcd7939d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m adds part 12 exercise 7[m
+[33m245e801[m adds part 12 exercise 6[m
+[33mb03d3a8[m adds part 12 exercise 5[m
+[33mfc839f4[m[33m ([m[1;31morigin/master[m[33m)[m adds part 12 exercise 3 and 4[m
+[33mc350d8b[m adds part 12 exercise 2[m
+[33m642de5e[m adds part 12 exercise 1[m
+[K[?1l>[?2004h🦄 > cd ..
+[?2004l[?2004h🦄 > ll
+[?2004lbash: ll: command not found
+[?2004h🦄 > docker exec -ti[K[Kit [7mtodo-backend_mongo_1[27mtodo-backend_mongo_1 bashj[K
+[?2004lroot@dfc208e836c9:/# [Kroot@dfc208e836c9:/# mpo  ongoi 
+MongoDB shell version v5.0.9
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("c4f4005b-9727-49fd-a3b5-84288be9d419") }
+MongoDB server version: 5.0.9
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+	https://docs.mongodb.com/
+Questions? Try the MongoDB Developer Community Forums
+	https://community.mongodb.com
+> show dbs [3G[Jshow dbs [12G
+> help[3G[Jhelp[7G
+	db.help()                    help on db methods
+	db.mycoll.help()             help on collection methods
+	sh.help()                    sharding helpers
+	rs.help()                    replica set helpers
+	help admin                   administrative help
+	help connect                 connecting to a db help
+	help keys                    key shortcuts
+	help misc                    misc things to know
+	help mr                      mapreduce
+
+	show dbs                     show database names
+	show collections             show collections in current database
+	show users                   show users in current database
+	show profile                 show most recent system.profile entries with time >= 1ms
+	show logs                    show the accessible logger names
+	show log [name]              prints out the last segment of log in memory, 'global' is default
+	use <db_name>                set current database
+	db.mycoll.find()             list objects in collection mycoll
+	db.mycoll.find( { a : 1 } )  list objects in mycoll where a == 1
+	it                           result of the last line evaluated; use to further iterate
+	DBQuery.shellBatchSize = x   set default number of items to display on shell
+	exit                         quit the mongo shell
+> q[3G[J[3Ghelp connect[3G[Jhelp connect[15G
+
+Normally one specifies the server on the mongo shell command line.  Run mongo --help to see those options.
+Additional connections may be opened:
+    var x = new Mongo('host[:port]');
+    var mydb = x.getDB('mydb');
+  or
+    var mydb = connect('host[:port]/mydb');
+
+Note: the REPL prompt only auto-reports getLastError() for the shell command line connection.
+> mongu[3G[Jmong[7Go -u root - [3G[Jmongo -u root -[18Gp passwoird[3G[Jmongo -u root -p passwoir[28G[3G[Jmongo -u root -p passwoi[27G[3G[Jmongo -u root -p passwo[26Grd[3G[Jmongo -u root -p password[28G
+uncaught exception: SyntaxError: unexpected token: identifier :
+@(shell):1:9
+> [3G[Jmongo -u root -p password[28G[3G[Jhelp connect[15G[3G[Jhelp[7G[3G[Jshow dbs[11G[3G[Jshow dbs[11G
+> [3G[J[3G^C
+bye
+root@dfc208e836c9:/# mongo -u root -p password
+MongoDB shell version v5.0.9
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("51c050ea-74b9-4802-8ba8-38d8d8ead5e4") }
+MongoDB server version: 5.0.9
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2022-06-26T20:29:07.048+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find({})_[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62b8c19106f9e718c78095b1"), "done" : false, "text" : "hello" }
+{ "_id" : ObjectId("62b8c19106f9e718c78095b2"), "text" : "Learn about containers", "done" : false }
+> [3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find[1;34m([0m{})[19G[3G[Jdb.todos.find([1;34m{[0m})[18G[3G[Jdb.todos.find({[1;34m}[0m)[17G[3G[Jdb.todos.find({}[1;34m)[0m[16G[3G[Jdb.todos.fin({}[1;34m)[0m[15G[3G[Jdb.todos.fi({}[1;34m)[0m[14G[3G[Jdb.todos.f({}[1;34m)[0m[13G[3G[Jdb.todos.({}[1;34m)[0m[12G[3G[Jdb.todos.i({}[1;34m)[0m[13G[3G[Jdb.todos.in({}[1;34m)[0m[14G[3G[Jdb.todos.ins({}[1;34m)[0m[15G[3G[Jdb.todos.inse({}[1;34m)[0m[16G[3G[Jdb.todos.inser({}[1;34m)[0m[17G[3G[Jdb.todos.insert({}[1;34m)[0m[18G[3G[Jdb.todos.insertO({}[1;34m)[0m[19G[3G[Jdb.todos.insertOn({}[1;34m)[0m[20G[3G[Jdb.todos.insertOne({}[1;34m)[0m[21G[3G[Jdb.todos.insertOne({[1;34m}[0m)[22G[3G[Jdb.todos.insertOne([1;34m{[0m})[23G[3G[Jdb.todos.insertOne({})[25G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("62b8d9a23eb0795d211a0819")
+}
+> [3G[Jdb.todos.insertOne({})[25G[3G[Jdb.todos.insertOne[1;34m([0m{})[24G[3G[Jdb.todos.insertOne([1;34m{[0m})[23G[3G[Jdb.todos.insertOne([1;34m{[0mt})[24G[3G[Jdb.todos.insertOne([1;34m{[0m})[23G[3G[Jdb.todos.insertOne([1;34m{[0m"})[24G[3G[Jdb.todos.insertOne({"})[26G
+uncaught exception: SyntaxError: "" literal not terminated before end of script :
+@(shell):1:23
+> [3G[Jdb.todos.insertOne({"})[26G[3G[Jdb.todos.insertOne[1;34m([0m{"})[25G[3G[Jdb.todos.insertOne([1;34m{[0m"})[24G[3G[Jdb.todos.insertOne([1;34m{[0m"t})[25G[3G[Jdb.todos.insertOne([1;34m{[0m"})[24G[3G[Jdb.todos.insertOne([1;34m{[0m})[23G[3G[Jdb.todos.insertOne([1;34m{[0mt})[24G[3G[Jdb.todos.insertOne([1;34m{[0mte})[25G[3G[Jdb.todos.insertOne([1;34m{[0mtex})[26G[3G[Jdb.todos.insertOne([1;34m{[0mtext})[27G[3G[Jdb.todos.insertOne([1;34m{[0mtext:})[28G[3G[Jdb.todos.insertOne([1;34m{[0mtext:I})[29G[3G[Jdb.todos.insertOne([1;34m{[0mtext:In})[30G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Inc})[31G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Incr})[32G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Incre})[33G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increa})[34G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increas})[35G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase})[36G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase })[37G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase t})[38G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase th})[39G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the})[40G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the })[41G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the n})[42G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the nu})[43G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the num})[44G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the numb})[45G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the numbe})[46G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number})[47G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number })[48G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number o})[49G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of})[50G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of })[51G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of t})[52G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of to})[53G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of too})[54G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tool})[55G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools})[56G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools })[57G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools i})[58G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in})[59G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in })[60G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in m})[61G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my})[62G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my })[63G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my t})[64G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my to})[65G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my too})[66G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my tool})[67G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my toolb})[68G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my toolbe})[69G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my toolbel})[70G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my toolbelt})[71G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my toolbelt:})[72G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my toolbelt})[71G[3G[Jdb.todos.insertOne([1;34m{[0mtext:Increase the number of tools in my toolbelt"})[72G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[71G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[70G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[69G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[69G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbeDlt"})[70G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbeDlt"})[70G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbeDDlt"})[71G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbeDlt"})[70G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[69G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[63G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[60G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[57G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[51G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[48G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[41G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[37G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[28G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[23G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[27G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[28G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[29G[3G[Jdb.todos.insertOne({text:Increase the number of tools in my toolbelt"})[28G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[29G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[37G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[41G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[48G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[51G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[57G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[60G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[63G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[72G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt"})[75G[3G[Jdb.todos.insertOne[1;34m([0m{text:"Increase the number of tools in my toolbelt"})[74G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt"})[73G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt",})[74G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", })[75G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "})[76G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "d})[77G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "do})[78G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "don})[79G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done})[80G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done:})[81G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done})[80G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done"})[81G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done";})[82G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done"})[81G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done":})[82G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done":f})[83G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done":fa})[84G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done":fal})[85G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done":fals})[86G[3G[Jdb.todos.insertOne([1;34m{[0mtext:"Increase the number of tools in my toolbelt", "done":false})[87G[3G[Jdb.todos.insertOne[1;34m([0m{text:"Increase the number of tools in my toolbelt", "done":false})[88G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt", "done":false})[89G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt", "done":false})[89G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("62b8d9e43eb0795d211a081a")
+}
+> [3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt", "done":false})[89G[3G[Jdb.todos.insertOne({"})[26G[3G[Jdb.todos.insertOne({})[25G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62b8c19106f9e718c78095b1"), "done" : false, "text" : "hello" }
+{ "_id" : ObjectId("62b8c19106f9e718c78095b2"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("62b8d9a23eb0795d211a0819") }
+{ "_id" : ObjectId("62b8d9e43eb0795d211a081a"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> [3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find[1;34m([0m{})[19G[3G[Jdb.todos.find([1;34m{[0m})[18G[3G[Jdb.todos.find({[1;34m}[0m)[17G[3G[Jdb.todos.find({}[1;34m)[0m[16G[3G[Jdb.todos.fin({}[1;34m)[0m[15G[3G[Jdb.todos.fi({}[1;34m)[0m[14G[3G[Jdb.todos.f({}[1;34m)[0m[13G[3G[Jdb.todos.({}[1;34m)[0m[12G[3G[Jdb.todos.d({}[1;34m)[0m[13G[3G[Jdb.todos.de({}[1;34m)[0m[14G[3G[Jdb.todos.del({}[1;34m)[0m[15G[3G[Jdb.todos.dele({}[1;34m)[0m[16G[3G[Jdb.todos.delet({}[1;34m)[0m[17G[3G[Jdb.todos.delete({}[1;34m)[0m[18G[3G[Jdb.todos.deleteO({}[1;34m)[0m[19G[3G[Jdb.todos.deleteOn({}[1;34m)[0m[20G[3G[Jdb.todos.deleteOne({}[1;34m)[0m[21G[3G[Jdb.todos.deleteOne({[1;34m}[0m)[22G[3G[Jdb.todos.deleteOne([1;34m{[0m})[23G[3G[Jdb.todos.deleteOne([1;34m{[0m"})[24G[3G[Jdb.todos.deleteOne([1;34m{[0m"_})[25G[3G[Jdb.todos.deleteOne([1;34m{[0m"_i})[26G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id})[27G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id"})[28G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id":})[29G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": })[30G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 6})[31G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62})[32G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b})[33G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8})[34G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d})[35G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9})[36G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a})[37G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a2})[38G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23})[39G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23e})[40G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb})[41G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0})[42G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb07})[43G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb079})[44G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795})[45G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d})[46G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d2})[47G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d21})[48G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d211})[49G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d211a})[50G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d211a0})[51G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d211a08})[52G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d211a081})[53G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": 62b8d9a23eb0795d211a0819})[54G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[30G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[25G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[12G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[13G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[14G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[15G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[16G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[17G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[18G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[19G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[20G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819}[1;34m)[0m[21G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819[1;34m}[0m)[22G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[23G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[24G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[25G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[26G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[27G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[28G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[29G[3G[Jdb.todos.deleteOne({"_id": 62b8d9a23eb0795d211a0819})[30G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819})[31G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": "62b8d9a23eb0795d211a0819})[55G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819})[57G[3G[Jdb.todos.deleteOne[1;34m([0m{"_id": "62b8d9a23eb0795d211a0819})[56G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": "62b8d9a23eb0795d211a0819})[55G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": "62b8d9a23eb0795d211a0819"})[56G[3G[Jdb.todos.deleteOne[1;34m([0m{"_id": "62b8d9a23eb0795d211a0819"})[57G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[58G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[58G
+{ "acknowledged" : true, "deletedCount" : 0 }
+> [3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[58G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.insertOne({text:"Increase the number of tools in my toolbelt", "done":false})[89G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62b8c19106f9e718c78095b1"), "done" : false, "text" : "hello" }
+{ "_id" : ObjectId("62b8c19106f9e718c78095b2"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("62b8d9a23eb0795d211a0819") }
+{ "_id" : ObjectId("62b8d9e43eb0795d211a081a"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> [3G[Jdb.todos.find({})[20G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[58G[3G[Jdb.todos.deleteOne[1;34m([0m{"_id": "62b8d9a23eb0795d211a0819"})[57G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": "62b8d9a23eb0795d211a0819"})[56G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[55G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[54G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[53G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[52G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[51G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[50G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[49G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[48G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[47G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[46G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[45G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[44G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[43G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[42G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[41G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[40G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[39G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[38G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[37G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[36G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[35G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[34G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[33G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[32G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[31G[3G[Jdb.todos.deleteOne({"_id": "62b8d9a23eb0795d211a0819"})[30G[3G[Jdb.todos.deleteOne({"_id": O"62b8d9a23eb0795d211a0819"})[31G[3G[Jdb.todos.deleteOne({"_id": Ob"62b8d9a23eb0795d211a0819"})[32G[3G[Jdb.todos.deleteOne({"_id": Obj"62b8d9a23eb0795d211a0819"})[33G[3G[Jdb.todos.deleteOne({"_id": Obje"62b8d9a23eb0795d211a0819"})[34G[3G[Jdb.todos.deleteOne({"_id": Objec"62b8d9a23eb0795d211a0819"})[35G[3G[Jdb.todos.deleteOne({"_id": Object"62b8d9a23eb0795d211a0819"})[36G[3G[Jdb.todos.deleteOne({"_id": ObjectI"62b8d9a23eb0795d211a0819"})[37G[3G[Jdb.todos.deleteOne({"_id": ObjectId"62b8d9a23eb0795d211a0819"})[38G[3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819"})[39G[3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819"})[40G[3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819"})[41G[3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819"})[64G[3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819"})[67G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": ObjectId("62b8d9a23eb0795d211a0819"})[66G[3G[Jdb.todos.deleteOne({"_id": ObjectId[1;34m([0m"62b8d9a23eb0795d211a0819"})[65G[3G[Jdb.todos.deleteOne([1;34m{[0m"_id": ObjectId("62b8d9a23eb0795d211a0819")})[66G[3G[Jdb.todos.deleteOne[1;34m([0m{"_id": ObjectId("62b8d9a23eb0795d211a0819")})[67G[3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819")})[68G[3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819")})[68G
+{ "acknowledged" : true, "deletedCount" : 1 }
+> [3G[Jdb.todos.deleteOne({"_id": ObjectId("62b8d9a23eb0795d211a0819")})[68G[3G[Jdb.todos.find({})[20G[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("62b8c19106f9e718c78095b1"), "done" : false, "text" : "hello" }
+{ "_id" : ObjectId("62b8c19106f9e718c78095b2"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("62b8d9e43eb0795d211a081a"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+root@dfc208e836c9:/# exit
+exit
+[?2004h🦄 > exit
+[?2004lexit
+
+Script done on Mon Jun 27 00:15:51 2022
