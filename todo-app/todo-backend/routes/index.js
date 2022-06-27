@@ -19,20 +19,22 @@ router.get('/', async (req, res) => {
   })
 })
 
-let addTodoCounter = 0
-
 router.get('/addatodo', async (req, res) => {
-  await redis.setAsync('todo counter', `${addTodoCounter++}`)
-  const value = await redis.getAsync('todo counter')
+  const value = await redis.getAsync('todocounter')
+  let counter = 0
+  counter = value
+  counter++
+  console.log('/addtodo/counter', counter)
+  await redis.setAsync('todocounter', `${counter}`)
 
   res.send({
     endpoint: '/addatodo',
-    value: `${value}`,
+    value: `${counter}`,
   })
 })
 
 router.get('/statistics', async (req, res) => {
-  const value = await redis.getAsync('todo counter')
+  const value = await redis.getAsync('todocounter')
   res.send({
     endpoint: '/addatodo',
     todocounter: `${value}`,
