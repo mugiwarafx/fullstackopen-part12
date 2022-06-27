@@ -1,4 +1,5 @@
 import React from 'react'
+import Todo from './Todo'
 
 const TodoList = ({ todos, deleteTodo, completeTodo }) => {
   const onClickDelete = (todo) => () => {
@@ -9,39 +10,50 @@ const TodoList = ({ todos, deleteTodo, completeTodo }) => {
     completeTodo(todo)
   }
 
+  let counter = 0
   return (
     <>
-      {todos.map(todo => {
-        const doneInfo = (
-          <>
-            <span>This todo is done</span>
-            <span>
-              <button onClick={onClickDelete(todo)}> Delete </button>
-            </span>
-          </>
-        )
+      {todos
+        .map((todo) => {
+          counter++
 
-        const notDoneInfo = (
-          <>
-            <span>
-              This todo is not done
-            </span>
-            <span>
-              <button onClick={onClickDelete(todo)}> Delete </button>
-              <button onClick={onClickComplete(todo)}> Set as done </button>
-            </span>
-          </>
-        )
+          const doneInfo = (
+            <div>
+              <span>This todo is done</span>
+              <span>
+                <button onClick={onClickDelete(todo)}> Delete </button>
+              </span>
+            </div>
+          )
 
-        return (
-          <div style={{ display: 'flex', justifyContent: 'space-between', maxWidth: '70%', margin: 'auto' }}>
-            <span>
-              {todo.text} 
-            </span>
-            {todo.done ? doneInfo : notDoneInfo}
-          </div>
-        )
-      }).reduce((acc, cur) => [...acc, <hr />, cur], [])}
+          const notDoneInfo = (
+            <div>
+              <span>This todo is not done</span>
+              <span>
+                <button onClick={onClickDelete(todo)}> Delete </button>
+                <button onClick={onClickComplete(todo)}> Set as done </button>
+              </span>
+            </div>
+          )
+
+          return (
+            <Todo
+              key={`${counter}`}
+              counter={counter}
+              todo={todo}
+              doneInfo={doneInfo}
+              notDoneInfo={notDoneInfo}
+            />
+          )
+        })
+        .reduce(
+          (acc, cur) => [
+            ...acc,
+            <hr key={Math.random() + Math.random()} />,
+            cur,
+          ],
+          []
+        )}
     </>
   )
 }
