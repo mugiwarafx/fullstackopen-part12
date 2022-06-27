@@ -1,11 +1,14 @@
 FROM node:16
 
-WORKDIR /Users/superjordi/repos/fullstackopen-part12/todo-app/todo-frontend
+USER node
 
-COPY . .
+WORKDIR /usr/src/app
 
-# Change npm ci to npm install since we are going to be in development mode
+COPY --chown=node:node . .
+
 RUN npm install
 
-# npm start is the command to start the application in development mode
+ENV DEBUG=todo-frontend:*
+ENV REACT_APP_BACKEND_URL=http://localhost:8000/
+
 CMD ["npm", "start"]
