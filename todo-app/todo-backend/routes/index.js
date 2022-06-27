@@ -1,5 +1,9 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const router = express.Router()
+const redis = require('../redis')
+
+console.log('Tao of programming')
+console.log('index/redis', redis)
 
 const configs = require('../util/config')
 
@@ -11,8 +15,8 @@ router.get('/', async (req, res) => {
 
   res.send({
     ...configs,
-    visits
-  });
-});
+    visits,
+  })
+})
 
-module.exports = router;
+module.exports = router

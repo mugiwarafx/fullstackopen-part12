@@ -2,8 +2,6 @@ const express = require('express')
 const { Todo } = require('../mongo')
 const router = express.Router()
 
-console.log('Tao')
-
 /* GET todos listing. */
 router.get('/', async (_, res) => {
   const todos = await Todo.find({})
