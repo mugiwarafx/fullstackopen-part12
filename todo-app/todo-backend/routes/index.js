@@ -2,10 +2,10 @@ const express = require('express')
 const router = express.Router()
 const redis = require('../redis')
 
+const configs = require('../util/config')
+
 console.log('Tao of programming')
 console.log('index/redis', redis)
-
-const configs = require('../util/config')
 
 let visits = 0
 
@@ -16,6 +16,26 @@ router.get('/', async (req, res) => {
   res.send({
     ...configs,
     visits,
+  })
+})
+
+let addTodoCounter = 0
+
+router.get('/addatodo', async (req, res) => {
+  await redis.setAsync('todo counter', `${addTodoCounter++}`)
+  const value = await redis.getAsync('todo counter')
+
+  res.send({
+    endpoint: '/addatodo',
+    value: `${value}`,
+  })
+})
+
+router.get('/statistics', async (req, res) => {
+  const value = await redis.getAsync('todo counter')
+  res.send({
+    endpoint: '/addatodo',
+    todocounter: `${value}`,
   })
 })
 
