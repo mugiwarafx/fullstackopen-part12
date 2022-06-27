@@ -61,5 +61,5 @@ typings/
 .next
 
 # blesson
-data
 mongo_data
+redis_data
