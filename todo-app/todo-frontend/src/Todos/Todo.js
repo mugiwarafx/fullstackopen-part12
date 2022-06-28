@@ -11,7 +11,7 @@ const Todo = ({ todo, doneInfo, notDoneInfo, counter }) => {
         margin: 'auto',
       }}
     >
-      <span>{todo.text} using docker containers vs code app</span>
+      <span>{todo.text}</span>
       {todo.done ? doneInfo : notDoneInfo}
     </div>
   )

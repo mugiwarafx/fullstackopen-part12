@@ -15,4 +15,6 @@ app.use(express.json())
 app.use('/', indexRouter)
 app.use('/todos', todosRouter)
 
+app.listen(8000, () => console.log('Server is up and running'))
+
 module.exports = app

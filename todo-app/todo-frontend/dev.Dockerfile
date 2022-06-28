@@ -9,6 +9,7 @@ COPY --chown=node:node . .
 RUN npm install
 
 ENV DEBUG=todo-frontend:*
+
 ENV REACT_APP_BACKEND_URL=http://localhost:8000/
 
-CMD ["npm", "start"]
+CMD npm run start

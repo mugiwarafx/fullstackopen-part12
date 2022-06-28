@@ -1,13 +1,14 @@
 FROM node:16
 
-WORKDIR /Users/superjordi/repos/fullstackopen-part12/todo-app/todo-backendp
+USER node
+
+WORKDIR /usr/src/app
 
 COPY --chown=node:node . .
 
-RUN npm ci 
+RUN npm ci --only=production
 
-ENV DEBUG=todo-app-backend:*
-
-USER node
+#ENV DEBUG=todo-app-backend:*
+ENV NODE_ENV=production
 
 CMD npm start
