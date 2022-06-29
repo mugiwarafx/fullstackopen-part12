@@ -1,0 +1,8 @@
+POST http://localhost:8000/albums HTTP/1.1
+content-type: application/json
+
+{
+    "title": "VS Code REST Client",
+    "artist": "Microsoft et al",
+    "price": 10
+}
