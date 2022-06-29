@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  # [f] frontend services
+  react:
+    image: image-frontend-react
+    build:
+      context: ./f # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./f/:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    container_name: container-frontend-react # This will name the container hello-front-dev
+    ports:
+      - 3000:3000
+
+  # [b] backend services
